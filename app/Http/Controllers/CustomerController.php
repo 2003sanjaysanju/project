@@ -14,10 +14,12 @@ class CustomerController extends Controller
     public function index()
     {
         $customer = customer::get();
-        $pending = customer::where('status', 0)->count();
-        $completed = customer::where('status', 2)->count();
-        $cancelled = customer::where('status', 1)->count();
-        return view('dashboard', compact('customer','pending','completed','cancelled'));
+        return view('dashboard', compact('customer'));
+        $pending=customer::where("status",0)->count();
+        $cancelled=customer::where("status",1)->count();
+        $complete=customer::where("status",2)->count();
+        $total=customer::count();
+        return view('dashboard', compact('customer','pending','cancelled','complete','total'));
     }
     /**
      *
@@ -53,6 +55,16 @@ class CustomerController extends Controller
         $data = null;
         return view('customer.check-appointment', compact('data'));
     }
+      /**
+     *
+     */
+    public function cancel(Request $request)
+    {
+        $data = customer::where('id',$request->id)->first();
+        $data->status = 1;
+        $data->save();
+        return to_route('customer.check');
+    }
     /**
      *
      */
@@ -62,8 +74,10 @@ class CustomerController extends Controller
         if($data == null){
             $data = new customer(); // Create a new customer instance
             $data->name = "No appointment found";
+            $data->cancel = 1;
+        }else{
+            $data->cancel = 0;
         }
-        // dd($data);
         return view('customer.check-appointment', compact('data'));
     }
     /**

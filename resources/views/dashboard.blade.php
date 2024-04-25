@@ -5,86 +5,14 @@
         </h2>
     </x-slot>
 
-    <div class="py-6">
+    <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in!") }}
                 </div>
             </div>
-
-        <div class="flex items-center" style="font-family: 'Muli', sans-serif;">
-            <div class="container ml-auto mr-auto flex flex-wrap items-start">
-                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-                    <div class=" rounded-lg m-h-64 p-2">
-                    <div class="rounded-lg p-4 bg-green-600 flex flex-col">
-                        <div>
-                        <h5 class="text-white text-2xl font-bold leading-none">
-                            Completed
-                        </h5>
-                        </div>
-                        <div class="flex items-center">
-                        <div class="text-lg text-white font-light">
-                            {{$completed ?? '0'}}
-                        </div>
-                    </div>
-                    </div>
-                </div>
-          </div>
-          <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-            <div class=" rounded-lg m-h-64 p-2">
-              <div class="rounded-lg p-4 bg-blue-600 flex flex-col">
-                <div>
-                  <h5 class="text-white text-2xl font-bold leading-none">
-                    Pending
-                  </h5>
-                </div>
-                <div class="flex items-center">
-                  <div class="text-lg text-white font-light">
-                    {{$pending ?? '0'}}
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-            <div class=" rounded-lg m-h-64 p-2">
-              <div class="rounded-lg p-4 bg-red-600 flex flex-col">
-                <div>
-                  <h5 class="text-white text-2xl font-bold leading-none">
-                     Cancelled
-                  </h5>
-                </div>
-                <div class="flex items-center">
-                  <div class="text-lg text-white font-light">
-                    {{$cancelled ?? '0'}}
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          {{-- <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-            <div class=" rounded-lg m-h-64 p-2">
-              <div class="rounded-lg p-4 bg-gray-600 flex flex-col">
-                <div>
-                  <h5 class="text-white text-2xl font-bold leading-none">
-                    something
-                  </h5>
-                  <span class="text-xs text-gray-400 leading-none">Lots to love.
-                    Less to spend.</span>
-                </div>
-                <div class="flex items-center">
-                  <div class="text-lg text-white font-light">
-                   00
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> --}}
         </div>
-      </div>
     </div>
     <section class="text-gray-700 body-font">
         <div class="container px-5 py-24 mx-auto">

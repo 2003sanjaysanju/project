@@ -14,11 +14,10 @@ class CustomerController extends Controller
     public function index()
     {
         $customer = customer::get();
-        $pending=customer::where("status",0)->count();
-        $cancelled=customer::where("status",1)->count();
-        $complete=customer::where("status",2)->count();
-        $total=customer::count();
-        return view('dashboard', compact('customer','pending','cancelled','complete','total'));
+        $pending = customer::where('status', 0)->count();
+        $completed = customer::where('status', 2)->count();
+        $cancelled = customer::where('status', 1)->count();
+        return view('dashboard', compact('customer','pending','completed','cancelled'));
     }
     /**
      *

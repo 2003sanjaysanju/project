@@ -18,6 +18,7 @@ class customer extends Model
     'barber',
     'status',
     'date',
+    'address',
     ];
 
 }

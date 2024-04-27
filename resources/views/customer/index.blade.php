@@ -151,6 +151,11 @@
                                 <input type="date" id="app_free_date" name="date" class="form-control"
                                 min="{{ date('Y-m-d') }}" placeholder="Your Free day" required>
                             </div>
+                            <div class="col-md-6 padding-10">
+                                 <input type="text" id="app_name" name="address" class="form-control" placeholder="addres"
+                                required>
+                            </div>
+                            
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 padding-10">
@@ -174,6 +179,7 @@
                                 </select>
 
                             </div>
+                        
                         </div>
                         <button class="default_btn" type="submit">Make Appointment</button>
 
@@ -225,6 +231,7 @@
                             <h3>Adam Castellon</h3>
                             <p>hair coloring</p>
                         </div>
+                       
                     </div>
                 </li>
             </ul>

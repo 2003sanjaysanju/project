@@ -88,6 +88,9 @@
                                     SERVICE
                                 </th>
                                 <th scope="col" class="px-6 py-3">
+                                    ADDRESS
+                                </th>
+                                <th scope="col" class="px-6 py-3">
                                     BARBER
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -128,6 +131,10 @@
                                         </td>
                                         <td class="px-6 py-4">
                                             {{ $customer->service ?? '' }}
+
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            {{ $customer->address ?? '' }}
 
                                         </td>
                                         <td class="px-6 py-4">

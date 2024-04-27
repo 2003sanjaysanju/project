@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("status")->default('0')->nullable();
             $table->string("amount")->default('0')->nullable();
             $table->string("date")->nullable();
+            $table->string("address")->nullable();
             $table->timestamps();
         });
     }

@@ -16,6 +16,15 @@
                                         <h2 class="text-secondary">{{ $data->date ?? '' }}</h2>
                                         <h2 class="text-secondary">{{ $data->time ?? '' }}</h2>
                                     </div>
+                                    @if(isset($data->cancel) && $data->cancel == 0)
+                                    <form action="{{ route('customer.cancel') }}" method="post">
+                                        @csrf
+                                        <input name="id" type="hidden" value="{{$data->id ?? null}}" class="form-control"
+                                                    placeholder="Your Email" required>
+                                        <!-- Include any necessary form fields here -->
+                                        <button type="submit" class="default_btn">Cancel Appointment</button>
+                                    </form>
+                                    @endif
                                 @else
                                     <form class="form-horizontal appointment_form" method="post"
                                         action="{{ route('customer.checkSlote') }}">

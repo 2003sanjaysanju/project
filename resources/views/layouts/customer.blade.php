@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="BarberShop & Hair Salon HTML Template">
     <meta name="author" content="">
-    <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
+    <title>Barber Shop || BarberShop Hair Salon</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
 
     <link rel="stylesheet" href=" {{ asset('css/elegant-font-icons.css') }}">
